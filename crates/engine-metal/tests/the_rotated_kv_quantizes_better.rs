@@ -32,7 +32,7 @@ use model_ir::Dtype;
 /// Deterministic integer hash (same mixer as the sibling Hadamard test), so the
 /// data is reproducible run to run with no RNG state.
 fn noise(at: u64) -> u32 {
-    let mut x = at.wrapping_mul(0x9E37_79B9_7F4A_7C15) ^ 0x5e5e_1234_9ABC_DEF0;
+    let mut x = at.wrapping_mul(0x9E37_79B9_7F4A_7C15) ^ 0x5E5E_1234_9ABC_DEF0;
     x ^= x >> 33;
     x = x.wrapping_mul(0xFF51_AFD7_ED55_8CCD);
     (x >> 32) as u32
